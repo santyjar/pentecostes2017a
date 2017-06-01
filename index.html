@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body ng-app="app">
+
+	<div ng-controller="slider as sl" class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3 slider" >
+				<div class="img" style="background-image:url('{{img}}')" ng-repeat="img in sl.nowImg track by $index"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+	<script type="text/javascript" src="js/angular/angular/angular.min.js"></script>
+    <script src="js/angular/angular-resource/angular-resource.js"></script>
+    <script src="js/angular/angular-animate/angular-animate.js"></script>
+    <script src="js/angular/angular-filter/dist/angular-filter.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<!--<script type="text/javascript" src="js/script.js"></script>-->
+	
+	<script type="text/javascript">
+		
+		function getImg(){
+			var tag = document.getElementsByClassName("_icyx7"); 
+			console.log(tag);
+			var links = [];
+
+			for(i in tag){
+				if(typeof tag[i] != 'undefined'){
+					links.push(tag[i].src);
+				}
+			}
+
+			console.log(links);
+		}
+
+	</script>
+
+
+</body>
+</html>
+
