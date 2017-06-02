@@ -7,7 +7,7 @@
 	background-size:cover;
 	background-position:center;
 	position:relative;
-	transition: margin-top 3s;
+	transition: margin-top 1s;
 }
 
 .img_1 , .img_2, .img_3{
@@ -23,4 +23,8 @@
 
 .slider .img.ng-leave-active {
 	margin-top:-500px;
+}
+
+.marco .marco-header{
+	padding:30px;
 }

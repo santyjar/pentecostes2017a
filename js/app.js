@@ -70,8 +70,8 @@ app.controller('slider',['imgs','$interval','$scope',function(imgs,$interval,$sc
 	}
 	
 	this.on = function(){
-
-		$interval(self.next,3000);
+		self.next();
+		$interval(self.next,5000);
 	}
 	this.on();
 }]);

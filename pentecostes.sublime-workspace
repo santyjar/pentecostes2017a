@@ -227,7 +227,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1423,
+				"buffer_size": 1540,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -236,7 +236,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 2504,
+				"buffer_size": 2518,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -245,7 +245,7 @@
 			"file": "css/estilos.css",
 			"settings":
 			{
-				"buffer_size": 309,
+				"buffer_size": 348,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -284,9 +284,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Guillermo/Documents/GitHub/pentecostes2017a",
-		"/C/Users/Guillermo/Documents/GitHub/pentecostes2017a/css",
-		"/C/Users/Guillermo/Documents/GitHub/pentecostes2017a/js"
+		"/var/www/html/pentecostes2017-a"
 	],
 	"file_history":
 	[
@@ -583,7 +581,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -592,15 +590,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1423,
+						"buffer_size": 1540,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1352,
-								1352
+								612,
+								612
 							]
 						],
 						"settings":
@@ -609,10 +607,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -621,15 +619,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2504,
+						"buffer_size": 2518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2292,
-								2292
+								1154,
+								1154
 							]
 						],
 						"settings":
@@ -638,10 +636,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 587.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -650,15 +648,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 309,
+						"buffer_size": 348,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								298,
-								298
+								346,
+								346
 							]
 						],
 						"settings":
