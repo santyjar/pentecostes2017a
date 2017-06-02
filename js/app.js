@@ -1,14 +1,10 @@
 'use strict';
 
-var app = angular.module('app',['ngAnimate','angular.filter','ngResource']);
+var app = angular.module('app',['ngAnimate']);
 
 app.service('imgs',function(){
 
-	this.imgs = [
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.134.1080.1080/18812178_431082083923025_1557254935647617024_n.jpg",
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/e15/18723633_233159870518143_4623404192449429504_n.jpg",
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/e15/18811951_1949318891967700_6991760343282221056_n.jpg",
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18879754_812408745579770_6876435914424320_n.jpg",
+	this.imgs = ["https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18879754_812408745579770_6876435914424320_n.jpg",
 	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c4.0.856.856/18722248_1359631807483938_6814160808482701312_n.jpg",
 	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/e35/c0.62.500.500/18878855_224163598099680_417857320983199744_n.jpg",
 	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18889058_134366300448622_7252638946058829824_n.jpg",
@@ -32,27 +28,25 @@ app.controller('slider',['imgs','$interval','$scope',function(imgs,$interval,$sc
 	self = this;
 
 	this.now = 0;
-
-	this.nowImg = ["https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.134.1080.1080/18812178_431082083923025_1557254935647617024_n.jpg",
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/e15/18723633_233159870518143_4623404192449429504_n.jpg",
-	"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/e15/18811951_1949318891967700_6991760343282221056_n.jpg",
+	this.id = 0;
+	this.nowImg = [
+	//"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.134.1080.1080/18812178_431082083923025_1557254935647617024_n.jpg",
+	//"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/s640x640/e15/18723633_233159870518143_4623404192449429504_n.jpg",
+	//"https://scontent-eze1-1.cdninstagram.com/t51.2885-15/e15/18811951_1949318891967700_6991760343282221056_n.jpg"
 	];
 	
 	this.next = function(){
-		//console.log("On");
-		//Agrego una imagen
-		self.nowImg.push(self.getNextImg());
-		//Borro la ultima imagen
+		
 		self.nowImg.shift();
-		//console.log(self.nowImg)
-	}
+
+		while(self.nowImg.length<3){
+			self.nowImg.push(self.getNextImg());
+		}	}
 
 	this.getNextImg = function(){
 		var imgsNow = imgs.getImgs();
 
 		//Tomo el id de imagen que corresponde
-		console.log("img now"+(imgsNow.length-2));
-		console.log("self.now " + self.now);
 		if(imgsNow.lenght-2==self.now){
 			//Now es anteultimo
 
@@ -69,13 +63,15 @@ app.controller('slider',['imgs','$interval','$scope',function(imgs,$interval,$sc
 		}else{
 			self.now++;
 		}
-console.log(idImg);
-		return imgsNow[idImg];
+		self.id++;
+		var devuelvo = {id:self.id,img:imgsNow[idImg]};
+		console.log(devuelvo);
+		return devuelvo
 	}
 	
 	this.on = function(){
 
-		$interval(self.next,1000);
+		$interval(self.next,3000);
 	}
 	this.on();
 }]);

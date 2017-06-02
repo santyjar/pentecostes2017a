@@ -11,7 +11,7 @@
 	<div ng-controller="slider as sl" class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3 slider" >
-				<div class="img" style="background-image:url('{{img}}')" ng-repeat="img in sl.nowImg track by $index"></div>
+				<div id="id{{$index}}" class="img" style="background-image:url('{{img.img}}')" ng-repeat="img in sl.nowImg track by img.id"></div>
 			</div>
 		</div>
 	</div>
